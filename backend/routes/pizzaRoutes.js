@@ -1,11 +1,13 @@
 import express from 'express';
-const router = express.Router();
 
 // Se importan los controladores para el manejo de las órdenes de las pizzas
-import { getAllPizzas, getPizzaById } from '../controller/pizzaController.js';
+import { getAllPizzas, getPizzaByName } from '../controller/pizzaController.js';
+
+const router = express.Router();
 
 // Rutas para pizzas
 router.get("/pizzas", getAllPizzas);
-router.get("/pizzas/:id", getPizzaById);
+router.get("/pizzas/:name", getPizzaByName);
 
-module.exports = (app) => app.use("/pizzas", router);
+//module.exports = (app) => app.use("/pizzas", router);
+export default router;
