@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon app.js",
-        "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
-        "test:watch": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watchAll"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:watch": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watchAll"
   },
   "keywords": [
     "node",
@@ -16,14 +16,15 @@
   "author": "neor4d",
   "license": "ISC",
   "devDependencies": {
-    "@babel/preset-env": "^7.23.3",
+    "@jest/globals": "^29.7.0",
+    "babel-jest": "^29.7.0",
     "cross-env": "^7.0.3",
     "jest": "^29.7.0",
-    "nodemon": "^3.1.0",
     "supertest": "^6.3.4"
   },
   "dependencies": {
     "express": "^5.1.0",
+    "express-validator": "^7.2.1",
     "nodemon": "^3.1.9",
     "supertest": "^7.1.0"
   }

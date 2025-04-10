@@ -2,7 +2,7 @@ export default {
   testEnvironment: 'node',
   transform: {},
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^(\\.{1,2}/.*)\\.js$': '$1'
   },
   testMatch: ['**/__tests__/**/*.test.js']
 };
