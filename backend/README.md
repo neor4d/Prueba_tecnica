@@ -5,11 +5,16 @@ JSON. El backend debe realizar pruebas mediante el uso de Jest.
 
 ## 📌 Características Principales
 
-- Endpoints para CRUD de pizzas (GET, POST, PUT, DELETE)
+- Endpoints para CRUD de pizzas
 - Datos persistentes en archivo JSON (simulación de DB)
 - Estructura MVC modularizada
-- Validación de datos integrada
-- 100% testeada con Jest (cobertura >90%)
+- 100% testeada con Jest
+
+## 🔎 Rutas para POSTMAN
+
+- Lista de todas las pizza: http://localhost:3000/api/pizzas
+
+- Datos de pizzas especificas por nombre: http://localhost:3000/api/pizzas/Margherita
 
 ## 🚀 Instalación, Uso y Estructura
 
