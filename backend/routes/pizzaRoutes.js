@@ -7,6 +7,7 @@ const router = express.Router();
 
 // Rutas para pizzas
 router.get("/pizzas", getAllPizzas);
+//router.get("/pizzas/:name", getPizzaByName);
 router.get("/pizzas/:name", pizzaExistsValidation, validateResult, getPizzaByName);
 
 //module.exports = (app) => app.use("/pizzas", router);

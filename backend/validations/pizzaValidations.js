@@ -1,9 +1,16 @@
 import {validationResult } from 'express-validator';
 import { param } from 'express-validator';
-import { readData } from '../utils/jsonUtils.js';
+import { readData } from '../utils/pizzaUtils.js';
 
 // Validación para verificar que la pizza exista
 export const pizzaExistsValidation = [
+
+  /*param('name')  // <-- Usa param() para parámetros de ruta, no body()
+    .trim()
+    .notEmpty().withMessage('El nombre de la pizza es requerido')
+    .isString().withMessage('El nombre debe ser texto')
+    .escape() // Prevención XSS*/
+
     param('name')
       .trim().notEmpty().withMessage('El nombre de la pizza es requerido')
       .custom(async (name) => {

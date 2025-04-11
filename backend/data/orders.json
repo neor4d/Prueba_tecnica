@@ -1,3 +1,14 @@
 [
-    
+  {
+    "OrderID": 1,
+    "customerName": "Anderson",
+    "items": [
+      {
+        "pizzaName": "Margherita",
+        "quantity": 10,
+        "unitPrice": 5
+      }
+    ],
+    "totalPrice": 50
+  }
 ]

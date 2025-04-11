@@ -7,7 +7,7 @@ import express from 'express';
 // Mock de la función readData (Un mock es un objeto que imita funciones
 // clases o modulos, es usado para hacer tests)
 const mockReadData = jest.fn();
-jest.unstable_mockModule('../../utils/jsonUtils.js', () => ({
+jest.unstable_mockModule('../../utils/pizzaUtils.js', () => ({
   readData: mockReadData
 }));
 
