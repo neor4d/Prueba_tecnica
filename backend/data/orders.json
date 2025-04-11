@@ -1,14 +1,50 @@
 [
   {
     "OrderID": 1,
-    "customerName": "Anderson",
+    "customerName": "John Doe",
     "items": [
       {
-        "pizzaName": "Margherita",
-        "quantity": 10,
+        "pizzaName": "Romana",
+        "quantity": 1,
         "unitPrice": 5
       }
     ],
-    "totalPrice": 50
+    "totalPrice": 5
+  },
+  {
+    "OrderID": 2,
+    "customerName": "John Doe",
+    "items": [
+      {
+        "pizzaName": "Romana",
+        "quantity": 1,
+        "unitPrice": 5
+      }
+    ],
+    "totalPrice": 5
+  },
+  {
+    "OrderID": 3,
+    "customerName": "John Doe",
+    "items": [
+      {
+        "pizzaName": "Diavola",
+        "quantity": 1,
+        "unitPrice": 7.5
+      }
+    ],
+    "totalPrice": 7.5
+  },
+  {
+    "OrderID": 4,
+    "customerName": "John Doe",
+    "items": [
+      {
+        "pizzaName": "Pizza Bianca",
+        "quantity": 1,
+        "unitPrice": 5
+      }
+    ],
+    "totalPrice": 5
   }
 ]

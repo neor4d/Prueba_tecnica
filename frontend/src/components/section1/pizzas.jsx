@@ -19,6 +19,38 @@ function Pizzas() {
         getPizzas();
     }, [])
 
+    const handleOrder = async (pizza) => {
+        try {
+            const formData = new URLSearchParams();
+            formData.append('customerName', 'John Doe');
+            formData.append('items[0][name]', pizza.name);
+            formData.append('items[0][unitPrice]', pizza.price);
+            formData.append('items[0][quantity]', '1');
+
+            const response = await axios.post (
+                "http://localhost:3000/api/order", 
+                formData.toString(),  // Convertir a string URL-encoded
+                {
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                }
+            );
+
+            console.log("Orden enviada con éxito:", response.data);
+
+            // Puedes agregar aquí una notificación al usuario de que la orden fue exitosa
+            alert(`¡Orden de ${pizza.name} enviada con éxito!`);
+            
+        } catch (error) {
+
+            console.error("Error al enviar la orden:", error);
+
+            // Manejo de errores
+            alert("Hubo un error al procesar tu orden. Por favor intenta nuevamente.");
+        }
+    }
+
     
     const HTMLPizzas = pizzas.map((pizza) => {
         return(
@@ -33,17 +65,18 @@ function Pizzas() {
                     <p className="mb-2 text-base text-gray-700">
                         <span className='font-semibold'>Ingredients:</span>
                         {pizza.ingredients.map((ingredient, index) => (
-                            <span> {ingredient} </span>
-                            
+                            <span key={index}> {ingredient} </span>
                         ))}
                     </p>
 
                     <div className="flex items-center justify-between">
                         <p className="mr-2 text-lg font-semibold text-gray-900">${pizza.price}</p>
 
-                        <button className="px-6 py-2 bg-orange-500 text-white font-semibold rounded-lg">Ordenar</button>
+                        <button onClick={() => handleOrder(pizza)} className="px-6 py-2 bg-orange-500 text-white font-semibold rounded-lg">Ordenar</button>
                     </div>
                 </div>
+
+
 
             </div>
         )

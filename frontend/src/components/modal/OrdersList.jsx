@@ -15,19 +15,27 @@ function OrdersList() {
     }
 
     useEffect(() => {
+
+        // Se actualiza constantemente para tener las nuevas ordenes cada segundo
+        const interval = setInterval(getOrders, 1000);
+
         getOrders();
+
+        // Limpiar el el intervalo para evitar problemas
+        return () => clearInterval(interval);
+
     }, [])
 
-    const HTMLOrders = orders.map((order) => {
+    const HTMLOrders = orders.map((order, index) => {
         return (
 
-            <div className="flex gap-4 pb-4 border-b border-gray-200">
+            <div key={index} className="flex gap-4 pb-4 border-b border-gray-200">
                 <img src={PizzaIMG} alt="Pizza Image" className="w-[10rem] rounded-lg" />
 
                 {order.items.map((item, index) => (
-                    <div>
-                        <h4 key={index} className="text-3xl font-semibold italic text-gray-800"> { item.pizzaName } </h4>
-                        <ul class="pt-4">
+                    <div key={index}>
+                        <h4 className="text-3xl font-semibold italic text-gray-800"> { item.pizzaName } </h4>
+                        <ul className="pt-4">
                             <li><b className='text-gray-600'>Order ID:</b> { order.OrderID } </li>
                             <li><b className='text-gray-600'>Customer:</b> { order.customerName } </li>
                             <li><b className='text-gray-600'>Quantity:</b> { item.quantity } </li>
