@@ -1,7 +1,14 @@
 import express from 'express';
-import bodyParser from 'body-parser';
+import cors from 'cors';
 
 const app = express();
+
+// Cors para permitir consultas a la api
+app.use(cors({
+    origin: 'http://localhost:5173', // IMPORTANTE CAMBIAR EL ORIGIN POR LA RUTA QUE SE TENDRÁ AL FINAL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
 
 // Middleware para parsear JSON y datos de formularios
 app.use(express.json());
