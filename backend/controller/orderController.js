@@ -14,7 +14,7 @@ export const createOrder = (req, res) => {
 
   const customerName = req.body.customerName;
 
-  // Verifica si customerName y items están presentes
+  // Verifica si customerName e items están presentes
   if (!customerName || req.body.items.length === 0) {
       return res.status(400).json({ error: "Faltan datos en la solicitud" });
   }

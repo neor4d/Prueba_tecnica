@@ -50,8 +50,14 @@ JSON. El backend debe realizar pruebas mediante el uso de Jest.
 
 backend/
 ├── __tests__/
-│   └── routes/
-│       └── pizzaRoutes.test.js     ||  Test de Jest para las rutas y controladores de la api.
+│   ├── routes/
+│   |   └── pizzaRoutes.test.js     ||  Test de Jest para las rutas y controladores de la api.
+│   |
+│   ├── controller/
+│   |   └── orderController.test.js     ||  Test de Jest para las rutas y controladores de la api.
+│   |
+│   └── mocks/
+│       └── ordersModel.test.js     ||  Test de Jest para las rutas y controladores de la api.
 |
 ├── controller /                    ||  Carpeta contenedora de los controladores necesarios para la api.
 │   └── pizzaControllers.js

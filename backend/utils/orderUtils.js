@@ -7,7 +7,7 @@ export const createOrder = (req, res) => {
 
   const ordersData = readOrders();
   const newOrder = {
-    id: ordersData.orders.lenght + 1,
+    id: ordersData.orders.length + 1,
     customerName,
     items,
     total: items.reduce((acc, item) => acc + item.quantity * item.price, 0),
