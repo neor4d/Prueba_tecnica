@@ -3,7 +3,7 @@ import Pizzas from './pizzas'
 function Section1() {
     return(
         <>
-        <section>
+        <section id="Catalogo">
 
             <div className="py-8">
 

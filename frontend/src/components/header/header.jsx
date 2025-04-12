@@ -5,7 +5,7 @@ function Header() {
     return (
         <>
         <header>
-            <nav className="bg-white w-full top-0 start-0 border-b border-gray-200 font-sour-gummy">
+            <nav className="fixed bg-white w-full top-0 start-0 z-30 border-b border-gray-200 font-sour-gummy">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src={pizzaLogo} className="h-8" alt="Flowbite Logo"/>
@@ -28,16 +28,16 @@ function Header() {
                     <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                         <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
                             <li>
-                                <a href="#" className="block py-2 px-3 text-white bg-orange-500 rounded-sm md:bg-transparent md:text-orange-500 md:p-0" aria-current="page">Inicio</a>
+                                <a href="#Inicio" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0" aria-current="page">Inicio</a>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0">Catálogo</a>
+                                <a href="#Catalogo" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0">Catálogo</a>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0">Nosotros</a>
+                                <a href="#Nosotros" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0">Nosotros</a>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0">Contacto</a>
+                                <a href="#Contacto" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0">Contacto</a>
                             </li>
                         </ul>
                     </div>

@@ -1,12 +1,45 @@
-# React + Vite
+# 🍕 Frontend de Pizzas para consumir api (ReactJS + Vite + TailwindCSS + Jest + Axios )
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  Frontend con diseño de tipo landing page de venta de pizzas, cuenta con un catálogo que
+ trae las pizzas consumiendo la api con Axios. 
 
-Currently, two official plugins are available:
+## 📌 Características Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Capacidad de Ordenar pizzas
+- Vista de ordenes en tiempo real
+- Catálogo de pizzas para ordenar
 
-## Expanding the ESLint configuration
+## 🚀 Instalación y Uso
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Dependencias utilizadas
+- ReactJS     |   19.0.0
+- Vite        |   6.2.0
+- Axios       |   1.8.4
+- PostCSS     |   8.5.3
+- TailwindCSS |   3.4.17 
+- Flowbite    |   3.1.2
+
+### Pasos para Configuración
+
+1. Clonar repositorio:
+   ```bash
+   git clone https://github.com/neor4d/Prueba_tecnica.git
+
+2. Instalar dependencias
+    npm install
+
+3. Realizar test antes de iniciar
+    npm run test
+
+4. Iniciar servidor
+    npm run dev
+
+
+### Explicación para su uso
+
+1. Ubicar el apartado de catálogo.
+
+2. Dar click sobre el botón ordenar de la pizza que se desee
+
+3. Hacer click en el botón del header para ver las órdenes
+actuales
