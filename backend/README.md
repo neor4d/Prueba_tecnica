@@ -8,13 +8,13 @@ JSON. El backend debe realizar pruebas mediante el uso de Jest.
 - Endpoints para CRUD de pizzas
 - Datos persistentes en archivo JSON (simulación de DB)
 - Estructura MVC modularizada
-- 100% testeada con Jest
+- Testeada con Jest
 
 ## 🔎 Rutas para POSTMAN
 
 - Lista de todas las pizza: http://localhost:3000/api/pizzas
-
 - Datos de pizzas especificas por nombre: http://localhost:3000/api/pizzas/Margherita
+- Lista de todas las ordenes // Peticion POST: http://localhost:3000/api/order
 
 ## 🚀 Instalación, Uso y Estructura
 
@@ -54,10 +54,10 @@ backend/
 │   |   └── pizzaRoutes.test.js     ||  Test de Jest para las rutas y controladores de la api.
 │   |
 │   ├── controller/
-│   |   └── orderController.test.js     ||  Test de Jest para las rutas y controladores de la api.
+│   |   └── orderController.test.js     ||  Test de Jest para los controladores de la api.
 │   |
 │   └── mocks/
-│       └── ordersModel.test.js     ||  Test de Jest para las rutas y controladores de la api.
+│       └── ordersModel.test.js     ||  Mock para los Test de JEST
 |
 ├── controller /                    ||  Carpeta contenedora de los controladores necesarios para la api.
 │   └── pizzaControllers.js

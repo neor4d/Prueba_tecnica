@@ -18,6 +18,7 @@
 - PostCSS     |   8.5.3
 - TailwindCSS |   3.4.17 
 - Flowbite    |   3.1.2
+- SweetAlert2
 
 ### Pasos para Configuración
 
@@ -28,10 +29,7 @@
 2. Instalar dependencias
     npm install
 
-3. Realizar test antes de iniciar
-    npm run test
-
-4. Iniciar servidor
+3. Iniciar servidor
     npm run dev
 
 
