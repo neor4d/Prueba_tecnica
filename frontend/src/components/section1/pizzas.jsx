@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import PizzaIMG from '../../assets/pizzas/pizza1.jpg'
+import Swal from 'sweetalert2';
 
 function Pizzas() {
 
@@ -29,7 +30,7 @@ function Pizzas() {
 
             const response = await axios.post (
                 "http://localhost:3000/api/order", 
-                formData.toString(),  // Convertir a string URL-encoded
+                formData.toString(),
                 {
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -39,15 +40,35 @@ function Pizzas() {
 
             console.log("Orden enviada con éxito:", response.data);
 
-            // Puedes agregar aquí una notificación al usuario de que la orden fue exitosa
-            alert(`¡Orden de ${pizza.name} enviada con éxito!`);
+            // La orden se confirma y muestra una ventana de sweetalert
+            Swal.fire({
+                title: '¡Éxito!',
+                html: `
+                    <p>¡Orden enviada con éxito!</p>
+                    <hr style="margin: 10px 0;">
+                    <p><strong>Número de orden:</strong> ${response.data.OrderID}</p>
+                    <p><strong>Cliente:</strong> ${response.data.customerName}</p>
+                    <p><strong>Pizza:</strong> ${response.data.items[0].pizzaName}</p>
+                    <p><strong>Cantidad:</strong> ${response.data.items[0].quantity}</p>
+                    <p><strong>Precio unitario:</strong> $${response.data.items[0].unitPrice}</p>
+                    <p><strong>Total:</strong> $${response.data.totalPrice}</p>
+                `,
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                timerProgressBar: true,
+            });
             
         } catch (error) {
 
             console.error("Error al enviar la orden:", error);
 
-            // Manejo de errores
-            alert("Hubo un error al procesar tu orden. Por favor intenta nuevamente.");
+            // Manejo de errores pero ahora con sweetalert
+            Swal.fire({
+                title: 'Error',
+                text: 'Hubo un error al procesar tu orden. Por favor intenta nuevamente.',
+                icon: 'error',
+                confirmButtonText: 'Entendido',
+            });
         }
     }
 

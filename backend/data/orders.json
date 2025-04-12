@@ -10,5 +10,65 @@
       }
     ],
     "totalPrice": 5
+  },
+  {
+    "OrderID": 2,
+    "customerName": "John Doe",
+    "items": [
+      {
+        "pizzaName": "Margherita",
+        "quantity": 2,
+        "unitPrice": 5
+      }
+    ],
+    "totalPrice": 10
+  },
+  {
+    "OrderID": 3,
+    "customerName": "John Doe",
+    "items": [
+      {
+        "pizzaName": "Margherita",
+        "quantity": 2,
+        "unitPrice": 5
+      }
+    ],
+    "totalPrice": 10
+  },
+  {
+    "OrderID": 4,
+    "customerName": "John Doe",
+    "items": [
+      {
+        "pizzaName": "Margherita",
+        "quantity": 1,
+        "unitPrice": 5
+      }
+    ],
+    "totalPrice": 5
+  },
+  {
+    "OrderID": 5,
+    "customerName": "John Doe",
+    "items": [
+      {
+        "pizzaName": "Bufala",
+        "quantity": 1,
+        "unitPrice": 6
+      }
+    ],
+    "totalPrice": 6
+  },
+  {
+    "OrderID": 6,
+    "customerName": "John Doe",
+    "items": [
+      {
+        "pizzaName": "Romana",
+        "quantity": 1,
+        "unitPrice": 5
+      }
+    ],
+    "totalPrice": 5
   }
 ]
