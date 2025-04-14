@@ -18,7 +18,7 @@
 - PostCSS     |   8.5.3
 - TailwindCSS |   3.4.17 
 - Flowbite    |   3.1.2
-- SweetAlert2
+- SweetAlert2 |   11.17.2
 
 ### Pasos para Configuración
 

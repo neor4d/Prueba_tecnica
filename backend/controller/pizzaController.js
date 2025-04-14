@@ -13,7 +13,9 @@ export const getAllPizzas = (req, res) => {
         res.json(data);
     
     } catch (error) {
+
         res.status(500).json({ error: "Error al leer los datos" });
+        
     }
 };
 
